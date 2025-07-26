@@ -40,6 +40,20 @@ This guide walks you through creating a simple "Hello World" Flutter app that ru
 
     * Run `source ~/.zshrc` to apply.
 
+3.5 **Install Ruby 3.4.5
+        ```
+         brew install rbenv ruby-build
+         echo 'eval "$(rbenv init -)"' >> ~/.bash_profile # For bash
+         source ~/.bash_profile # For bash
+         rbenv install -l
+         rbenv install 3.4.5
+         rbenv global 3.4.5
+         ruby -v
+         which ruby
+         gem update --system
+         gem update
+         ```
+
 4.  **Install CocoaPods (for iOS dependencies)**:
     * Install via terminal: `sudo gem install cocoapods`.
     * Verify with `pod --version`.

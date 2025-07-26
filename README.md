@@ -55,7 +55,7 @@ This guide walks you through creating a simple "Hello World" Flutter app that ru
 
 
 4.  **Install CocoaPods (for iOS dependencies)**:
-    * Install via terminal: `sudo gem install cocoapods`.
+    * Install via terminal: `gem install cocoapods`.
     * Verify with `pod --version`.
 
 5.  **Optional: Install Visual Studio Code**:

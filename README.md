@@ -29,7 +29,8 @@ This guide walks you through creating a simple "Hello World" Flutter app that ru
 3.  **Install Android Studio (for Android development)**:
     * Download Android Studio from <https://developer.android.com/studio>.
     * Install it, then open Android Studio and use the SDK Manager to install:
-        * Android SDK Platform (latest, e.g., Android 15).
+    * Goto Settings / Language & Frameworks / Android SDK
+        * Android SDK Platform (latest, e.g., Android 16).
         * Android SDK Build-Tools.
         * Android Emulator.
     * Add Android SDK to your PATH in `~/.zshrc` or `~/.bash_profile`:
@@ -38,7 +39,14 @@ This guide walks you through creating a simple "Hello World" Flutter app that ru
         export ANDROID_HOME=$HOME/Library/Android/sdk
         ```
 
-    * Run `source ~/.zshrc` to apply.
+    * Your ~/.bash_profile should include the following
+        ```
+        export ANDROID_HOME=$HOME/Library/Android/sdk
+        export PATH=$HOME/development/flutter/bin:~/bin:$PATH
+        export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+        '''
+        
+    * Run `source ~/.bash_profile` to apply.
 
 3.5.  **Install Ruby 3.4.5**:
 

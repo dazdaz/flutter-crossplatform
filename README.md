@@ -44,10 +44,10 @@ This guide walks you through creating a simple "Hello World" Flutter app that ru
 
          brew install rbenv ruby-build
          echo 'eval "$(rbenv init -)"' >> ~/.bash_profile # For bash
-         source ~/.bash_profile # For bash
          rbenv install -l
          rbenv install 3.4.5
          rbenv global 3.4.5
+         source ~/.bash_profile # For bash
          ruby -v
          which ruby
          gem update --system

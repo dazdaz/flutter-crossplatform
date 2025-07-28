@@ -187,3 +187,8 @@ This guide walks you through creating a simple "Hello World" Flutter app that ru
 * [Flutter Official Site](https://flutter.dev/)
 * [Flutter Installation Guide](https://flutter.dev/docs/get-started/install/macos)
 * [React Native vs. Flutter Comparison](https://www.geeksforgeeks.org/react-native-vs-flutter-which-one-to-choose-for-app-development/) (if considering alternatives)
+
+## Training
+
+* https://codelabs.developers.google.com/codelabs/flutter-codelab-first
+* https://codelabs.developers.google.com/codelabs/flutter-boring-to-beautiful

@@ -170,6 +170,34 @@ This guide walks you through creating a simple "Hello World" Flutter app that ru
 * Run `flutter build apk` to generate an `.apk` file (or `flutter build appbundle` for a `.aab` file).
 * Install on a device via `adb install` or upload to Google Play (requires a [Google Play Console account](https://play.google.com/console)).
 
+### Setting up the Android Emulator:
+```bash
+# Your .bash_profile should have these
+
+export ANDROID_SDK_ROOT=/opt/homebrew/share/android-commandlinetools
+export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/build-tools/36.0.0:$HOME/development/flutter/bin:~/bin:$JAVA_HOME/bin:$PATH
+
+# Download and install the system image using sdkmanager
+# API Level 35 = Android 15
+sdkmanager --verbose "system-images;android-35;google_apis;arm64-v8a"
+sdkmanager platform-tools
+sdkmanager --licenses
+
+# Check that it installed
+sdkmanager --list_installed | grep android-35
+
+# Once installed, create the AVD
+avdmanager create avd -n emulate-android15 -k "system-images;android-35;google_apis;arm64-v8a" -d pixel_8_pro
+
+# Ensure that the emulator was installed
+sdkmanager --list | grep emulator
+
+# After creation, start the emulator:
+emulator -avd emulate-android15
+```
+
 ### Physical Devices:
 
 * Connect via USB, enable developer options/USB debugging (Android) or trust the Mac (iOS), then use `flutter run`.

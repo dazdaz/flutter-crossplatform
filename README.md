@@ -158,19 +158,7 @@ This guide walks you through creating a simple "Hello World" Flutter app that ru
 
 3.  Select the Android emulator. The app will build and launch.
 
-## Step 6: Build and Deploy (Optional for Production)
-
-### For iOS:
-
-* Run `flutter build ios` to generate build files.
-* Open `ios/Runner.xcworkspace` in Xcode to archive and create an `.ipa` file for distribution (requires an [Apple Developer account](https://developer.apple.com/account/) for real devices or App Store).
-
-### For Android:
-
-* Run `flutter build apk` to generate an `.apk` file (or `flutter build appbundle` for a `.aab` file).
-* Install on a device via `adb install` or upload to Google Play (requires a [Google Play Console account](https://play.google.com/console)).
-
-### Setting up the Android Emulator:
+### Setting up the Android Emulator manually:
 ```bash
 # Your .bash_profile should have these
 
@@ -197,6 +185,18 @@ sdkmanager --list | grep emulator
 # After creation, start the emulator:
 emulator -avd emulate-android15
 ```
+
+## Step 6: Build and Deploy (Optional for Production)
+
+### For iOS:
+
+* Run `flutter build ios` to generate build files.
+* Open `ios/Runner.xcworkspace` in Xcode to archive and create an `.ipa` file for distribution (requires an [Apple Developer account](https://developer.apple.com/account/) for real devices or App Store).
+
+### For Android:
+
+* Run `flutter build apk` to generate an `.apk` file (or `flutter build appbundle` for a `.aab` file).
+* Install on a device via `adb install` or upload to Google Play (requires a [Google Play Console account](https://play.google.com/console)).
 
 ### Physical Devices:
 
